@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//}
+rootProject.name = "Flutter Play"
+include ':app'
+
+setBinding(new Binding([gradle: this]))
+evaluate(new File(settingsDir, 'flutter_module/.android/include_flutter.groovy'))
+include ':flutter_module'
